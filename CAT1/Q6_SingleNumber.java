@@ -1,20 +1,12 @@
-public class Q5_ReverseString {
+public class Q6_SingleNumber {
     public static void main(String[] args) {
-        char[] s = {'h', 'e', 'l', 'l', 'o'};
+        int[] nums = {4, 1, 2, 1, 2};
 
-        int left = 0;
-        int right = s.length - 1;
+        int result = 0;
 
-        while (left < right) {
-            char temp = s[left];
-            s[left] = s[right];
-            s[right] = temp;
+        for (int n : nums)
+            result ^= n;
 
-            left++;
-            right--;
-        }
-
-        for (char ch : s)
-            System.out.print(ch + " ");
+        System.out.println("Single Number: " + result);
     }
 }
