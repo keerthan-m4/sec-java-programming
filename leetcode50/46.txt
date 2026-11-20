@@ -1,0 +1,13 @@
+// 46. Search a 2D Matrix II - Nested Loop Approach
+// LeetCode Java solution
+
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        for (int[] row : matrix) {
+            for (int value : row) {
+                if (value == target) return true;
+            }
+        }
+        return false;
+    }
+}

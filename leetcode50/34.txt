@@ -1,0 +1,23 @@
+// 34. Find the Difference of Two Arrays
+// LeetCode Java solution
+
+class Solution {
+    public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
+        List<Integer> first = new ArrayList<>();
+        List<Integer> second = new ArrayList<>();
+        for (int num : nums1) {
+            boolean found = false;
+            for (int other : nums2) if (num == other) found = true;
+            if (!found && !first.contains(num)) first.add(num);
+        }
+        for (int num : nums2) {
+            boolean found = false;
+            for (int other : nums1) if (num == other) found = true;
+            if (!found && !second.contains(num)) second.add(num);
+        }
+        List<List<Integer>> result = new ArrayList<>();
+        result.add(first);
+        result.add(second);
+        return result;
+    }
+}

@@ -1,0 +1,8 @@
+// 18. Goal Parser Interpretation
+// LeetCode Java solution
+
+class Solution {
+    public String interpret(String command) {
+        return command.replace("()", "o").replace("(al)", "al");
+    }
+}
